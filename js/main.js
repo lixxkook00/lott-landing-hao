@@ -153,11 +153,24 @@ $$('.video-icon').forEach((item) => {
     }
 });
 
+
+
 window.onload = (event) =>{
     var myModal = new bootstrap.Modal(document.getElementById('signUpModal'), {
         keyboard: false
     })
     myModal.show();
+    
+    // const tempURL = "https://Victoryle.unimmo.net/"
+
+    // console.log(document.URL)
+    const nameThisShit = /:\/\/([^\/]+).unimmo.net/.exec(window.location.href)
+
+    // console.log(nameThisShit[1])
+
+    $$('.ref-link').forEach((item) => {
+        item.href = `https://lottpower.org/signup/${nameThisShit[1]}`
+    });
 };
 let flat = true;
 
@@ -171,3 +184,4 @@ window.onscroll = function () {
         myModal.show();
     }
 };
+
