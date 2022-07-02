@@ -164,14 +164,20 @@ window.onload = (event) =>{
     // const tempURL = "https://Victoryle.unimmo.net/"
 
     // console.log(document.URL)
-    const nameThisShit = /:\/\/([^\/]+).unimmo.net/.exec(window.location.href)
-
-    // console.log(nameThisShit[1])
-
-    $$('.ref-link').forEach((item) => {
-        item.href = `https://lottpower.org/signup/${nameThisShit[1]}`
-    });
+    
 };
+
+const nameThisShit = /:\/\/([^\/]+).unimmo.net/.exec(window.location.href)
+const refNameThisShit = nameThisShit[1]
+
+if(nameThisShit==="xosoblockchain"){
+    refNameThisShit="seven"
+}
+
+$$('.ref-link').forEach((item) => {
+    item.href = `https://lottpower.org/signup/${refNameThisShit}`
+});
+
 let flat = true;
 
 window.onscroll = function () {
