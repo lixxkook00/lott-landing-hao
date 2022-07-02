@@ -74,10 +74,6 @@ const videoContent = [
 
 const playVideoWithID = (id) => {
     currentVideoID = id
-
-    var myModal = new bootstrap.Modal(document.getElementById('exampleModal'), {
-        keyboard: false
-    })
     renderContentVideo(id)
 }
 
@@ -156,3 +152,22 @@ $$('.video-icon').forEach((item) => {
         playVideoWithID(item.getAttribute("data-video"))
     }
 });
+
+window.onload = (event) =>{
+    var myModal = new bootstrap.Modal(document.getElementById('signUpModal'), {
+        keyboard: false
+    })
+    myModal.show();
+};
+let flat = true;
+
+window.onscroll = function () {
+    var myModal = new bootstrap.Modal(document.getElementById('signUpModal'), {
+        keyboard: false
+    })
+
+    if($('#product').getBoundingClientRect?.().y < 0 && flat===true){
+        flat=false
+        myModal.show();
+    }
+};
