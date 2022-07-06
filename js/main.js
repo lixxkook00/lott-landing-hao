@@ -173,7 +173,7 @@ const refNameThisShit = nameThisShit[1]
 if(nameThisShit==="xosoblockchain"){
     refNameThisShit="seven"
 }
-
+ 
 $$('.ref-link').forEach((item) => {
     item.href = `https://lottpower.org/signup/${refNameThisShit}`
 });
