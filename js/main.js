@@ -170,7 +170,7 @@ window.onload = (event) =>{
 const nameThisShit = /:\/\/([^\/]+).unimmo.net/.exec(window.location.href)
 const refNameThisShit = nameThisShit[1]
 
-if(nameThisShit==="xosoblockchain"){
+if(refNameThisShit==="xosoblockchain"){
     refNameThisShit="seven"
 }
  
